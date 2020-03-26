@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class FiftyPentagonal
+ {
+public static void main(String[] args) 
+{
+   	    int cnt = 1;
+	    for(int d = 1; d <= 50; d++)
+{
+	    System.out.printf("%-8d",PentagonalNumber(d));
+	    if(cnt % 10 == 0)
+            System.out.println();	
+            cnt++;
+    }
+  }
+            public static int PentagonalNumber(int d) 
+{
+	    return (d * (3 * d - 1))/2;
+    }
+}
