@@ -1,0 +1,35 @@
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Dates 
+{
+
+	public static void main(String[] args) 
+{
+		
+		//Format 
+		LocalDate date = LocalDate.now();
+		//default format
+		System.out.println("\nDefault of LocalDate="+date);
+		//specific format
+		System.out.println(date.format(DateTimeFormatter.ofPattern("d::MMM::uuuu")));
+
+		LocalDateTime dateTime = LocalDateTime.now();
+		//default format
+		System.out.println("Default of LocalDateTime="+dateTime);
+		//specific format
+		System.out.println(dateTime.format(DateTimeFormatter.ofPattern("d::MMM::uuuu HH::mm::ss")));
+   		Instant timestamp = Instant.now();
+		//default format
+		System.out.println("Default of Instant="+timestamp);
+		//Parse 
+		LocalDateTime ld = LocalDateTime.parse("26::Mar::2018 21::39::48",
+				DateTimeFormatter.ofPattern("d::MMM::uuuu HH::mm::ss"));
+		System.out.println("Default of after parsing = "+ld+"\n");
+	}
+
+}
+
+                 
